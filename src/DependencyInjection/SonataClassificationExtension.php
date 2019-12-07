@@ -176,7 +176,7 @@ class SonataClassificationExtension extends Extension
             'orphanRemoval' => false,
         ]);
 
-        $collector->addUnique($config['class']['tag'], 'tag_context', ['slug', 'context']);
+        // $collector->addUnique($config['class']['tag'], 'tag_context', ['slug', 'context']);
 
         $collector->addAssociation($config['class']['collection'], 'mapManyToOne', [
             'fieldName' => 'context',
@@ -195,7 +195,7 @@ class SonataClassificationExtension extends Extension
             'orphanRemoval' => false,
         ]);
 
-        $collector->addUnique($config['class']['collection'], 'tag_collection', ['slug', 'context']);
+        // $collector->addUnique($config['class']['collection'], 'tag_collection', ['slug', 'context']);
 
         if (interface_exists(MediaInterface::class)) {
             $collector->addAssociation($config['class']['collection'], 'mapManyToOne', [
